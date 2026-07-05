@@ -1,0 +1,34 @@
+include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n ;
+    cin>>n;
+    int arr[n];int ind,ind2;
+    int mini = 1000000000;
+    int maxi = -1;
+    for(int i =0;i<n;i++){
+        cin>>arr[i];
+       if(mini>arr[i]){
+         ind = i;
+         mini = arr[i];
+       }
+        if(maxi<arr[i]){
+         ind2= i;
+         maxi = arr[i];
+       }
+    }
+     int temp ;
+    temp= arr[ind];
+    arr[ind]=arr[ind2];
+    arr[ind2]=temp;
+     for(int i =0;i<n;i++){
+        cout<<arr[i]<<"\t";}
+    return 0;
+}
