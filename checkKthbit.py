@@ -1,0 +1,7 @@
+n = int(input())
+k = int(input())
+if(n & (1<<k))!=0:
+    print(1)
+else:
+    print(0)
+
